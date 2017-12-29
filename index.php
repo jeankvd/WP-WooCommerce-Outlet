@@ -19,6 +19,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+		<div id="slider" class="nivoSlider">
+			<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			<img src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' alt="" title="This is an example of a caption" />
+			<img src='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="" data-transition="slideInLeft" />
+		</div>
+
 		<?php
 		if ( have_posts() ) :
 
@@ -55,4 +61,6 @@ get_header(); ?>
 
 <?php
 get_sidebar();
+
 get_footer();
+

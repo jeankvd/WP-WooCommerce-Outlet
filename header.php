@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'theme-boilerplate' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation navbar navbar-dark bg-dark">
+		<nav id="site-navigation" class="main-navigation navbar">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'theme-boilerplate' ); ?></button>
 			<?php
 				wp_nav_menu( array(
@@ -33,6 +33,8 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
+			<div id="logo">Logo</div>
+			<div id="nav-cart">Shop Cart</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
