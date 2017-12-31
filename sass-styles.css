@@ -1,8 +1,38 @@
 body {
-  background-color: #666 !important; }
+  background-color: grey !important; }
 
 p {
   color: white; }
 
 nav {
   background-color: transparent; }
+
+nav.scrolled {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10000; }
+
+#slider-parent {
+  position: relative; }
+
+.nivo-directionNav a {
+  border-radius: 50%;
+  background-color: white !important;
+  padding: 25px 20px;
+  opacity: .4; }
+
+.nivo-controlNav {
+  position: absolute;
+  bottom: 4%;
+  padding: 0;
+  z-index: 100;
+  text-align: center;
+  width: 100%; }
+
+.nivo-controlNav a {
+  background-color: white;
+  margin: 0 5px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 25px;
+  height: 25px; }

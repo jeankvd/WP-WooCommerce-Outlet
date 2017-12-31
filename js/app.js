@@ -1,10 +1,10 @@
-const navBar = document.getElementById("site-navigation");
+const navbar = document.getElementById("site-navigation");
 
 window.addEventListener("scroll", function(){
     if(window.scrollY > 50) {
-       navBar.classList.add = "scrolled";
+       navbar.classList.add("scrolled");
     } else if (window.scrollY < 50) {
-       navBar.classList.add = "unscrolled";        
+       navbar.classList.remove("scrolled");        
     }
 });
 
