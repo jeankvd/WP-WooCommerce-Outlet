@@ -139,6 +139,12 @@ get_header(); ?>
 		</div>
 	</div>
 
+	<!-- On Sale and Blog Section -->
+
+	<div class="container-fluid">
+		<div class="col-6"></div>
+	</div>
+
 		<?php
 		if ( have_posts() ) :
 

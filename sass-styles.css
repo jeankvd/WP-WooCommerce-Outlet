@@ -36,3 +36,39 @@ nav.scrolled {
   display: inline-block;
   width: 25px;
   height: 25px; }
+
+footer {
+  background-color: #23232c;
+  color: white;
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+  padding: 3% 0; }
+
+.information-ul ul, #popular-tags ul {
+  padding: 0;
+  margin: 0; }
+
+.information-ul li {
+  list-style: none;
+  display: block;
+  transition: ease-in-out all .3s; }
+
+.information-ul li:hover {
+  color: red;
+  padding-left: 17px;
+  transition: ease-in-out all .3s; }
+
+#popular-tags li {
+  list-style: none;
+  border: solid 1px grey;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px; }
+
+footer hr {
+  background-color: white; }
+
+#credit-cards {
+  text-align: right; }
