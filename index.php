@@ -72,12 +72,34 @@ get_header(); ?>
 				<li><a href="">Jewelry</a></li>
 			</ul>
 
+			<!-- TODO: WP Integration -->
 			<div class="owl-carousel owl-theme owl-loaded">
 				<div class="owl-stage-outer">
 					<div class="owl-stage">
-						<div class="owl-item">...</div>
-						<div class="owl-item">...</div>
-						<div class="owl-item">...</div>
+						<div class="owl-item">Hola</div>
+						<div class="owl-item">sup</div>
+						<div class="owl-item">dertp</div>
+					</div>
+				</div>
+				<div class="owl-stage-outer">
+					<div class="owl-stage">
+						<div class="owl-item">Holaaasd</div>
+						<div class="owl-item">susdsdsp</div>
+						<div class="owl-item">dessddrtp</div>
+					</div>
+				</div>
+				<div class="owl-stage-outer">
+					<div class="owl-stage">
+						<div class="owl-item">Hola</div>
+						<div class="owl-item">sup</div>
+						<div class="owl-item">dertp</div>
+					</div>
+				</div>
+				<div class="owl-stage-outer">
+					<div class="owl-stage">
+						<div class="owl-item">Hola</div>
+						<div class="owl-item">sup</div>
+						<div class="owl-item">dertp</div>
 					</div>
 				</div>
 				<div class="owl-controls">
