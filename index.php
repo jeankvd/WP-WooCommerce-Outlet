@@ -73,46 +73,19 @@ get_header(); ?>
 			</ul>
 
 			<!-- TODO: WP Integration -->
-			<div class="owl-carousel owl-theme owl-loaded">
-				<div class="owl-stage-outer">
-					<div class="owl-stage">
-						<div class="owl-item">Hola</div>
-						<div class="owl-item">sup</div>
-						<div class="owl-item">dertp</div>
-					</div>
-				</div>
-				<div class="owl-stage-outer">
-					<div class="owl-stage">
-						<div class="owl-item">Holaaasd</div>
-						<div class="owl-item">susdsdsp</div>
-						<div class="owl-item">dessddrtp</div>
-					</div>
-				</div>
-				<div class="owl-stage-outer">
-					<div class="owl-stage">
-						<div class="owl-item">Hola</div>
-						<div class="owl-item">sup</div>
-						<div class="owl-item">dertp</div>
-					</div>
-				</div>
-				<div class="owl-stage-outer">
-					<div class="owl-stage">
-						<div class="owl-item">Hola</div>
-						<div class="owl-item">sup</div>
-						<div class="owl-item">dertp</div>
-					</div>
-				</div>
-				<div class="owl-controls">
-					<div class="owl-nav">
-						<div class="owl-prev">prev</div>
-						<div class="owl-next">next</div>
-					</div>
-					<div class="owl-dots">
-						<div class="owl-dot active"><span></span></div>
-						<div class="owl-dot"><span></span></div>
-						<div class="owl-dot"><span></span></div>
-					</div>
-				</div>
+			<div class="owl-carousel owl-theme">
+				<div class="item"><h4>1</h4></div>
+				<div class="item"><h4>2</h4></div>
+				<div class="item"><h4>3</h4></div>
+				<div class="item"><h4>4</h4></div>
+				<div class="item"><h4>5</h4></div>
+				<div class="item"><h4>6</h4></div>
+				<div class="item"><h4>7</h4></div>
+				<div class="item"><h4>8</h4></div>
+				<div class="item"><h4>9</h4></div>
+				<div class="item"><h4>10</h4></div>
+				<div class="item"><h4>11</h4></div>
+				<div class="item"><h4>12</h4></div>
 			</div>
 
 			<div class="card-deck" id="products">
