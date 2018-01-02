@@ -63,6 +63,8 @@ get_header(); ?>
 		<div id="featured-products">
 			<h2>Our Products</h2>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quasi rem quia</p>
+			
+			<!-- Owl.js products Carousel -->
 			<!-- TODO: WP Woocommerce mini menu (maybe)
 					Change on Click-->
 			<ul>
@@ -79,53 +81,63 @@ get_header(); ?>
 				<div class="item"><h4>3</h4></div>
 				<div class="item"><h4>4</h4></div>
 				<div class="item"><h4>5</h4></div>
+				
 				<div class="item"><h4>6</h4></div>
 				<div class="item"><h4>7</h4></div>
 				<div class="item"><h4>8</h4></div>
-				<div class="item"><h4>9</h4></div>
+				<div cl			ass="item"><h4>9</h4></div>
 				<div class="item"><h4>10</h4></div>
 				<div class="item"><h4>11</h4></div>
 				<div class="item"><h4>12</h4></div>
 			</div>
+		</div>
 
-			<div class="card-deck" id="products">
-				<div class="card">
-					<img class="card-img-top" src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="Card image cap">
-					<div class="card-block">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		<!-- Featured Products listings widget -->
+		<!-- TODO: Widget WordPress Integration  and Card Stylings-->
+		<div class="container-fluid">
+			<div id="featured-products">
+				<div class="row">
+					<div class="col-6">
+						<h1>Hello Men's Clothing</h1>
 					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="Card image cap">
-					<div class="card-block">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="Card image cap">
-					<div class="card-block">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="Card image cap">
-					<div class="card-block">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<div class="col-6">
+						<div class="row">
+							<div class="col-6">Hello World</div>
+							<div class="col-6">Hello World</div>							
+						</div>
+						<div class="row">
+							<div class="col-6">Hello World</div>
+							<div class="col-6">Hello World</div>							
+						</div>
 					</div>
 				</div>
 			</div>
-
-
 		</div>
-		
+
+		<!-- Featured Products slider -->
+
+	<div class"container-fluid">
+		<div class="row">
+			<div class="col-6">
+				<div class="owl-carousel owl-theme">
+					<div class="item"><h4>1</h4></div>
+					<div class="item"><h4>2</h4></div>
+					<div class="item"><h4>3</h4></div>
+					<div class="item"><h4>4</h4></div>
+					<div class="item"><h4>5</h4></div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="owl-carousel owl-theme">
+					<div class="item"><h4>1</h4></div>
+					<div class="item"><h4>2</h4></div>
+					<div class="item"><h4>3</h4></div>
+					<div class="item"><h4>4</h4></div>
+					<div class="item"><h4>5</h4></div>
+				</div>	
+			</div>
+		</div>
+	</div>
 
 		<?php
 		if ( have_posts() ) :
