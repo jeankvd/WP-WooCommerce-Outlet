@@ -37,6 +37,12 @@ nav.scrolled {
   width: 25px;
   height: 25px; }
 
+#subscribe {
+  text-align: center; }
+
+#subscribe span {
+  color: red; }
+
 footer {
   background-color: #23232c;
   color: white;

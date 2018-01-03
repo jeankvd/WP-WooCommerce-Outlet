@@ -139,48 +139,63 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<!-- On Sale and Blog Section -->
+	<!-- Sales Images-->
 
 	<div class="container-fluid">
-		<div class="col-6"></div>
+		<div class="row">
+			<div class="col-6">25 Off on Men's Clothin</div>
+			<div class="col-6">45% off New Years Sake</div>		
+		</div>
 	</div>
 
-		<?php
-		if ( have_posts() ) :
+	<!-- Sales and Blog Section -->
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<h3>Most Viewed</h3>
+				<div class="owl-carousel owl-theme">
+					<div class="item"><h4>1</h4></div>
+					<div class="item"><h4>2</h4></div>
+					<div class="item"><h4>3</h4></div>
+					<div class="item"><h4>4</h4></div>
+				</div>	
+			</div>
+			<div class="col-3">
+				<h3>On Sale</h3>
+					<div class="owl-carousel owl-theme">
+						<div class="item"><h4>1</h4></div>
+						<div class="item"><h4>2</h4></div>
+						<div class="item"><h4>3</h4></div>
+						<div class="item"><h4>4</h4></div>
+					</div>	
+			</div>
+			<div class="col-6">
+				<h3>Our Blog</h3>
+				<div>Cards</div>
+			</div>
+		</div>
+	</div>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+	<!-- Subscription -->
 
-			<?php
-			endif;
+	<div id="subscribe">
+		<p><span>Special Offer</span> for Subscribers</p>
+		<h3>10% Members Discount</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+		<form>
+			<input type="email" name="email">
+			<a>Submit</a>
+		</form>
+		<div class="instagram-feed">
+			instagram feed
+		</div>
+	</div>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 
 get_footer();
 
