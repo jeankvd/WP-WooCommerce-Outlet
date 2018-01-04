@@ -13,7 +13,10 @@ window.addEventListener("scroll", function(){
 jQuery(document).ready(function ($) {
     // Call Nivo Slider
     $(window).load(function() {
-        $('#slider').nivoSlider();
+        $('#slider').nivoSlider({
+            prevText: '<',
+            nextText: '>'  
+        });
     });
 
 
