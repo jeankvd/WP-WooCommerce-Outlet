@@ -4,13 +4,60 @@ body {
 p {
   color: white; }
 
-nav {
-  background-color: transparent; }
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  padding-left: 100px;
+  padding-right: 100px;
+  top: 50px;
+  z-index: 10000;
+  height: 30px; }
+  .navbar li {
+    display: inline-block;
+    margin-right: 18px; }
+    .navbar li:last-child {
+      margin-right: 0; }
+    .navbar li a {
+      color: white;
+      margin-bottom: 3px; }
+  .navbar .menu-item a:hover {
+    text-decoration: none;
+    border-bottom: white 3px solid;
+    margin-bottom: 0px; }
+  .navbar.scrolled {
+    position: fixed;
+    top: 0;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    -webkit-animation-name: fadeInDown;
+    -webkit-animation-duration: 5.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: anim_titles;
+    -moz-animation-duration: 5.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-duration: 0.7s;
+    -moz-animation-duration: 0.7s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out; }
 
-nav.scrolled {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 10000; }
+#logo {
+  position: absolute;
+  left: calc(50% - 19px); }
 
 #slider-parent {
   position: relative; }
@@ -28,20 +75,18 @@ nav.scrolled {
   z-index: 100;
   text-align: center;
   width: 100%; }
-
-.nivo-controlNav a {
-  background-color: white;
-  margin: 0 5px;
-  border-radius: 50%;
-  display: inline-block;
-  width: 25px;
-  height: 25px; }
+  .nivo-controlNav a {
+    background-color: white;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 25px;
+    height: 25px; }
 
 #subscribe {
   text-align: center; }
-
-#subscribe span {
-  color: red; }
+  #subscribe span {
+    color: red; }
 
 footer {
   background-color: #23232c;

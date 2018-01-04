@@ -9,17 +9,79 @@ p {
   color: white;
 }
 
-
-nav {
-	background-color:transparent;
-}
-
-nav.scrolled {
-	position: fixed;
-	background-color: rgba($color: black, $alpha: .20);
+.navbar {
+	background-color: transparent;
+	position: absolute;
+	padding-left: 100px;
+	padding-right: 100px;
+	top: 50px;
 	z-index: 10000;
+	height: 30px;
+
+	li {
+		display: inline-block;
+		margin-right: 18px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		a {
+			color: white;
+			margin-bottom: 3px;
+		}
+	}
+
+	.menu-item a:hover {
+		text-decoration: none;
+		border-bottom: white 3px solid;
+		margin-bottom: 0px;
+	}
+
+	&.scrolled {
+		position: fixed;
+		top: 0; 
+		height: 54px;
+		background-color: rgba($color: black, $alpha: .20);
+		z-index: 10000;	
+		// Fade In Down animate.css demodule
+		// TODO: demodule keyframes
+
+		-webkit-animation-name: fadeInDown;
+		-webkit-animation-duration: 5.0s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: normal;
+		-webkit-animation-play-state: running;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-name: anim_titles;
+		-moz-animation-duration: 5.0s;
+		-moz-animation-timing-function: linear;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-direction: normal;
+		-moz-animation-play-state: running;
+		-moz-animation-fill-mode: forwards;
+		-webkit-animation-delay: 1s;
+		-moz-animation-delay: 1s;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation-iteration-count: 1;
+		-webkit-animation-duration: 0.7s;
+		-moz-animation-duration: 0.7s;
+		-webkit-animation-delay: 0s;
+		-moz-animation-delay: 0s;
+		-webkit-animation-timing-function: ease-out;
+		-moz-animation-timing-function: ease-out;
+		
+	}
 }
 
+#logo {
+	position: absolute;
+	// Logo width
+	left: calc(50% - 19px); 
+}
+
+// Hero Slider
 #slider-parent {
 	position: relative;
 }
@@ -38,26 +100,24 @@ nav.scrolled {
 	z-index: 100;
 	text-align: center;
 	width: 100%;
-}
-
-.nivo-controlNav a {
-	background-color: white;
-	margin: 0 5px;
-	border-radius: 50%;
-	display: inline-block;
-	width: 25px;
-	height: 25px;
-
+	a {
+		background-color: white;
+		margin: 0 5px;
+		border-radius: 50%;
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+	}
 }
 
 
 // Subscription
 #subscribe {
 	text-align: center;
-}
 
-#subscribe span {
+	span {
 	color: red;
+	}
 }
 
 // Footer

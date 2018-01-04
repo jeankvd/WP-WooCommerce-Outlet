@@ -2,9 +2,9 @@ const navbar = document.getElementById("site-navigation");
 
 // Navbar add class
 window.addEventListener("scroll", function(){
-    if(window.scrollY > 50) {
+    if(window.scrollY > 80) {
        navbar.classList.add("scrolled");
-    } else if (window.scrollY < 50) {
+    } else if (window.scrollY < 80) {
        navbar.classList.remove("scrolled");        
     }
 });

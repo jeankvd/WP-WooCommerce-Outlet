@@ -120,6 +120,7 @@ function theme_boilerplate_scripts() {
 	wp_enqueue_style( 'normalize-theme-boilerplate-style', get_stylesheet_uri() );	
 	wp_enqueue_style( 'nivo-slider', get_template_directory_uri() . "/css/nivo-slider.css" );
 	wp_enqueue_style( 'owl-carousel-css', "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css");
+	wp_enqueue_style( 'animate', get_template_directory_uri() . "/css/animate.css" );	
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . "/css/bootstrap.css" );
 	wp_enqueue_style( 'sass-styles', get_template_directory_uri() . "/sass-styles.css");		
 
