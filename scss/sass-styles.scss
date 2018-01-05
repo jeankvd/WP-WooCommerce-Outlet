@@ -1,12 +1,14 @@
+// Variables
+$body-color: #707070;
+
 // Theme Styles
+
+
 
 // Header
 body {
-	background-color: grey!important;
-}
-
-p {
-  color: white;
+	background-color: #fff;
+	color: $body-color;
 }
 
 .navbar {
@@ -130,6 +132,35 @@ p {
 	}
 }
 
+// Card deck
+#top-sales {
+	margin: 15px 10px!important;
+
+	.card:hover {
+		opacity: .8;
+	}
+}
+
+// Our Products WooCommerce
+#featured-products {
+	text-align: center;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		color: #fff!important;
+	}
+
+	li:not(first-child) {
+		margin-right: 15px;
+	}
+}
 
 // Subscription
 #subscribe {

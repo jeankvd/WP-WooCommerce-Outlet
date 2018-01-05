@@ -30,29 +30,29 @@ get_header(); ?>
 
 		<!-- Sales imgs -->
 		<!-- TODO: make images editable from WP ADMIN ACFs -->
-		<div class="card-deck">
+		<div class="card-deck" id="top-sales">
 			<div class="card card-inverse">
-				<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' alt="Card image">
+				<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-3.jpg") ?>' alt="Card image">
 				<div class="card-img-overlay">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<h4 class="card-title"></h4>
+					<p class="card-text"></p>
+					<p class="card-text"><small class="text-muted"></small></p>
 				</div>
 			</div>
 			<div class="card card-inverse">
-				<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>'  alt="Card image">
+				<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-4.jpg") ?>'  alt="Card image">
 				<div class="card-img-overlay">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<h4 class="card-title"></h4>
+					<p class="card-text"></p>
+					<p class="card-text"><small class="text-muted"></small></p>
 				</div>
 			</div>
 			<div class="card card-inverse">
-				<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>'  alt="Card image">
+				<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-5.jpg") ?>'  alt="Card image">
 				<div class="card-img-overlay">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<h4 class="card-title"></h4>
+					<p class="card-text"></p>
+					<p class="card-text"><small class="text-muted"></small></p>
 				</div>
 			</div>
 		</div>
@@ -67,29 +67,35 @@ get_header(); ?>
 			<!-- Owl.js products Carousel -->
 			<!-- TODO: WP Woocommerce mini menu (maybe)
 					Change on Click-->
-			<ul>
-				<li><a href="">Women</a></li>
-				<li><a href="">Men</a></li>
-				<li><a href="">Kids</a></li>
-				<li><a href="">Jewelry</a></li>
-			</ul>
-
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link active" id="women-tab" data-toggle="tab" href="#women" role="tab" aria-controls="women" aria-selected="true">Women</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab" aria-controls="men" aria-selected="false">Men</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" id="kids-tab" data-toggle="tab" href="#kids" role="tab" aria-controls="kids" aria-selected="false">Kids</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" id="jewelry-tab" data-toggle="tab" href="#jewelry" role="tab" aria-controls="jewelry" aria-selected="false">Jewelry</a>
+					</li>
+				</ul>
 			<!-- TODO: WP Integration -->
+				
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="women" role="tabpanel" aria-labelledby="women-tab">...</div>
+					<div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">.hEY</div>
+				</div>
+
 			<div class="owl-carousel owl-theme">
 				<div class="item"><h4>1</h4></div>
 				<div class="item"><h4>2</h4></div>
 				<div class="item"><h4>3</h4></div>
 				<div class="item"><h4>4</h4></div>
 				<div class="item"><h4>5</h4></div>
-				
-				<div class="item"><h4>6</h4></div>
-				<div class="item"><h4>7</h4></div>
-				<div class="item"><h4>8</h4></div>
-				<div cl			ass="item"><h4>9</h4></div>
-				<div class="item"><h4>10</h4></div>
-				<div class="item"><h4>11</h4></div>
-				<div class="item"><h4>12</h4></div>
 			</div>
+
 		</div>
 
 		<!-- Featured Products listings widget -->

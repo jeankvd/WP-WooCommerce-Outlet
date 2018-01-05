@@ -1,8 +1,6 @@
 body {
-  background-color: grey !important; }
-
-p {
-  color: white; }
+  background-color: #fff;
+  color: #707070; }
 
 .navbar {
   background-color: transparent;
@@ -96,6 +94,24 @@ p {
     .nivo-controlNav a.active {
       transform: scale(1.3);
       transition: all .3s ease-in-out; }
+
+#top-sales {
+  margin: 15px 10px !important; }
+  #top-sales .card:hover {
+    opacity: .8; }
+
+#featured-products {
+  text-align: center; }
+  #featured-products ul {
+    padding: 0;
+    margin: 0;
+    display: inline-block; }
+  #featured-products li {
+    list-style: none;
+    display: inline-block;
+    color: #fff !important; }
+  #featured-products li:not(first-child) {
+    margin-right: 15px; }
 
 #subscribe {
   text-align: center; }
