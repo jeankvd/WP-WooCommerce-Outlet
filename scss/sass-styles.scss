@@ -154,11 +154,41 @@ body {
 	li {
 		list-style: none;
 		display: inline-block;
-		color: #fff!important;
 	}
 
 	li:not(first-child) {
 		margin-right: 15px;
+	}
+}
+
+.item {
+
+	.card:hover {
+		
+		.img-top {
+			z-index: -1;
+		}
+
+		.item-buttons {
+			z-index: 1;
+		}
+	}
+}
+
+.img-top {
+	position: absolute;
+	z-index: 1;
+}
+
+.item-buttons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+
+	button {
+		display: block;
+		margin-bottom: 5px;
 	}
 }
 

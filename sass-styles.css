@@ -108,10 +108,28 @@ body {
     display: inline-block; }
   #featured-products li {
     list-style: none;
-    display: inline-block;
-    color: #fff !important; }
+    display: inline-block; }
   #featured-products li:not(first-child) {
     margin-right: 15px; }
+
+.item .card:hover .img-top {
+  z-index: -1; }
+
+.item .card:hover .item-buttons {
+  z-index: 1; }
+
+.img-top {
+  position: absolute;
+  z-index: 1; }
+
+.item-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1; }
+  .item-buttons button {
+    display: block;
+    margin-bottom: 5px; }
 
 #subscribe {
   text-align: center; }
