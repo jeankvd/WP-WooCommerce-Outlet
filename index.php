@@ -101,12 +101,32 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="item"><h4>2</h4></div>
-						<div class="item"><h4>3</h4></div>
-						<div class="item"><h4>4</h4></div>
-						<div class="item"><h4>5</h4></div>
-					</div>
+					<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'latest-arrivals',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+								echo ('<div class="item card">');
+									wc_get_template_part( 'content', 'product' );
+									echo ("<div class='item-buttons'>
+									<button>13</button>
+									<button>set</button>
+									<button>shr</button>
+								</div>");
+								echo '</div>';
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
+
 				</div>
+				
 				<div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">
 					<div class="owl-carousel owl-theme">
 						<div class="item"><h4>6</h4></div>

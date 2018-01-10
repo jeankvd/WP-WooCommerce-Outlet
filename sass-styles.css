@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: white;
   color: #707070; }
 
 .navbar {
@@ -110,7 +110,7 @@ body {
     list-style: none;
     display: inline-block; }
   #featured-products li:not(first-child) {
-    margin-right: 15px; }
+    margin-right: 14px; }
 
 .item .card:hover .img-top {
   z-index: -1; }
