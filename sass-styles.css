@@ -112,21 +112,26 @@ body {
   #featured-products li:not(first-child) {
     margin-right: 14px; }
 
-.item .card:hover .img-top {
-  z-index: -1; }
+.card:hover .attachment-shop_single {
+  opacity: 1;
+  transition: opacity .5s ease; }
 
-.item .card:hover .item-buttons {
-  z-index: 1; }
+.card:hover .item-buttons {
+  opacity: 1;
+  transition: opacity .5s ease; }
 
-.img-top {
+.attachment-shop_single {
   position: absolute;
-  z-index: 1; }
+  opacity: 0;
+  transition: opacity .5s ease; }
 
 .item-buttons {
   position: absolute;
+  transition: opacity .5s ease;
+  z-index: 1;
   top: 0;
   right: 0;
-  z-index: -1; }
+  opacity: 0; }
   .item-buttons button {
     display: block;
     margin-bottom: 5px; }

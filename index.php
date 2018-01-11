@@ -90,14 +90,9 @@ get_header(); ?>
 							<div class="card mb-3">
 								<img class="card-img-top" src='<?php echo get_template_directory_uri() . "/images/lenses.jpg"?>' alt="Card image cap">
 								<img class="card-img-top img-top" src='<?php echo get_template_directory_uri() . "/images/lenses2.jpg"?>' alt="Card image cap">
-								<div class="item-buttons">
-									<button>13</button>
-									<button>set</button>
-									<button>shr</button>
-								</div>
 								<div class="card-block">
-								<h4 class="card-title">Fopo Designs Woolrich Klettersack</h4>
-								<p class="card-text"><small class="text-muted">$241.99</small></p>
+									<h4 class="card-title">Fopo Designs Woolrich Klettersack</h4>
+									<p class="card-text"><small class="text-muted">$241.99</small></p>
 								</div>
 							</div>
 						</div>
@@ -110,14 +105,7 @@ get_header(); ?>
 							$loop = new WP_Query( $args );
 							if ( $loop->have_posts() ) {
 								while ( $loop->have_posts() ) : $loop->the_post();
-								echo ('<div class="item card">');
 									wc_get_template_part( 'content', 'product' );
-									echo ("<div class='item-buttons'>
-									<button>13</button>
-									<button>set</button>
-									<button>shr</button>
-								</div>");
-								echo '</div>';
 								endwhile;
 							} else {
 								echo __( 'No products found' );
@@ -125,7 +113,7 @@ get_header(); ?>
 							wp_reset_postdata();
 						?>
 
-				</div>
+					</div>
 				
 				<div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">
 					<div class="owl-carousel owl-theme">

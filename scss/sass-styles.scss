@@ -132,7 +132,7 @@ body {
 	}
 }
 
-// Card deck
+// Sales Card deck
 #top-sales {
 	margin: 15px 10px!important;
 
@@ -161,30 +161,31 @@ body {
 	}
 }
 
-.item {
+.card:hover {
+	.attachment-shop_single {
+		opacity: 1;
+		transition: opacity .5s ease;	
+	}
 
-	.card:hover {
-		
-		.img-top {
-			z-index: -1;
-		}
-
-		.item-buttons {
-			z-index: 1;
-		}
+	.item-buttons {
+		opacity: 1;
+		transition: opacity .5s ease;	
 	}
 }
 
-.img-top {
-	position: absolute;
-	z-index: 1;
+.attachment-shop_single {
+	position: absolute;	
+	opacity: 0;
+	transition: opacity .5s ease;		
 }
 
 .item-buttons {
 	position: absolute;
+	transition: opacity .5s ease;		
+	z-index: 1;
 	top: 0;
 	right: 0;
-	z-index: -1;
+	opacity: 0;
 
 	button {
 		display: block;
