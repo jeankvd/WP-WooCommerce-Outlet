@@ -169,7 +169,7 @@ body {
 
 	.item-buttons {
 		opacity: 1;
-		transition: opacity .5s ease;	
+		transition: opacity .5s ease;
 	}
 }
 
@@ -190,6 +190,14 @@ body {
 	button {
 		display: block;
 		margin-bottom: 5px;
+	}
+}
+
+// Bottom Widget, Most Viewed, Sale and Blog
+
+#blog {
+	.item {
+		display: block;
 	}
 }
 

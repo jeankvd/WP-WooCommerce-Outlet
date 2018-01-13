@@ -136,6 +136,9 @@ body {
     display: block;
     margin-bottom: 5px; }
 
+#blog .item {
+  display: block; }
+
 #subscribe {
   text-align: center; }
   #subscribe span {

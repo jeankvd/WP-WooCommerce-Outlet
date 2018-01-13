@@ -85,7 +85,7 @@ get_header(); ?>
 			
 			<div class="tab-content">
 				<div class="tab-pane fade show active" id="women" role="tabpanel" aria-labelledby="women-tab">
-					<div class="owl-carousel owl-theme">
+					<div class="owl-women owl-carousel owl-theme">
 					<?php
 							$args = array(
 								'post_type' => 'product',
@@ -105,7 +105,7 @@ get_header(); ?>
 			</div>
 						
 				<div class="tab-pane fade" id="men" role="tabpanel" aria-labelledby="men-tab">
-					<div class="owl-carousel owl-theme">
+					<div class="owl-men owl-carousel owl-theme">
 						<div class="item"><h4>6</h4></div>
 						<div class="item"><h4>7</h4></div>
 						<div class="item"><h4>8</h4></div>
@@ -117,71 +117,61 @@ get_header(); ?>
 		</div>
 
 	<!-- Featured Products listings widget -->
-	<!-- TODO: Widget WordPress Integration  and Card Stylings-->
+	<!-- TODO: Widget WordPress Integration with images and Card Stylings-->
 	<div class="container-fluid">
 		<div id="featured-products">
 			<div class="row">
-				<?php
-				function grab_child_image($terms,$taxonomies,$args) {
-					// var_dump($terms,$taxonomies,$args); // debug
-					foreach ($terms as &$term) {
-					  $cp = new WP_Query(
-						array (
-						  'cat' => $term->term_id,
-						  'fields' => 'ids',
-						  'ignore_sticky_posts' => true
-						)
-					  );
-					  // var_dump($cp->posts); // debug
-					  if ($cp->have_posts()) {
-						$attach = new WP_Query(
-						  array (
-							'post_parent__in' => $cp->posts,
-							'post_type' => 'attachment',
-							'post_status' => 'inherit',
-							'ignore_sticky_posts' => true,
-							'posts_per_page' => 1
-						  )
-						);
-						if ($attach->have_posts()) {
-						  $term->image = wp_get_attachment_image($attach->posts[0]->ID);
-						} else {
-						  $term->image = 'some other image';
-						}
-					  }
-					}
-					return $terms;
-				  }
-				  add_filter('get_terms','grab_child_image',10,3);
-
-				$taxonomy     = 'product_cat';
-				$orderby      = 'name';  
-				$show_count   = 0;      // 1 for yes, 0 for no
-				$pad_counts   = 0;      // 1 for yes, 0 for no
-				$hierarchical = 1;      // 1 for yes, 0 for no  
-				$title        = '';  
-				$empty        = 0;
-
-				$args = array(
-						'taxonomy'     => $taxonomy,
-						'orderby'      => $orderby,
-						'show_count'   => $show_count,
-						'pad_counts'   => $pad_counts,
-						'hierarchical' => $hierarchical,
-						'title_li'     => $title,
-						'hide_empty'   => $empty
-				);
-				$all_categories = get_categories( $args );
-				foreach ($all_categories as $cat) {
-					if($cat->category_parent == 0) {
-						$category_id = $cat->term_id;       
-						echo '<br /><a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name  .'</a>';
-
-
-					}       
-				}
-				?>
-
+				<div class="col-6">
+					<div class="card card-inverse">
+						<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+						<div class="card-img-overlay">
+							<h4 class="card-title">Card title</h4>
+							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="row">
+						<div class="col-6">
+							<div class="card card-inverse">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<div class="card-img-overlay">
+									<h4 class="card-title">Card title</h4>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="card card-inverse">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<div class="card-img-overlay">
+									<h4 class="card-title">Card title</h4>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="card card-inverse">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<div class="card-img-overlay">
+									<h4 class="card-title">Card title</h4>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="card card-inverse">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<div class="card-img-overlay">
+									<h4 class="card-title">Card title</h4>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -191,7 +181,8 @@ get_header(); ?>
 	<div class"container-fluid">
 		<div class="row">
 			<div class="col-6">
-				<div class="owl-carousel owl-theme">
+				<h3>Latest Arrivals</h3>
+				<div class="owl-arrivals owl-carousel owl-theme">
 					<div class="item"><h4>1</h4></div>
 					<div class="item"><h4>2</h4></div>
 					<div class="item"><h4>3</h4></div>
@@ -200,7 +191,8 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="col-6">
-				<div class="owl-carousel owl-theme">
+				<h3>Featured Products</h3>
+				<div class="owl-featured owl-carousel owl-theme">
 					<div class="item"><h4>1</h4></div>
 					<div class="item"><h4>2</h4></div>
 					<div class="item"><h4>3</h4></div>
@@ -213,15 +205,34 @@ get_header(); ?>
 
 <!-- Sales Images-->
 
-	<div class="container-fluid">
+	<div class="container-fluid" >
 		<div class="row">
-			<div class="col-6">25 Off on Men's Clothin</div>
-			<div class="col-6">45% off New Years Sake</div>		
+			<div class="col-6">
+				<div class="card card-inverse">
+					<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/bottom.jpg") ?>'  alt="Card image">
+					<div class="card-img-overlay">
+						<h4 class="card-title"></h4>
+						<p class="card-text"></p>
+						<p class="card-text"><small class="text-muted"></small></p>
+					</div>
+				</div>	
+			</div>
+			<div class="col-6">
+				<div class="card card-inverse">
+					<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/bottom2.jpg") ?>'  alt="Card image">
+					<div class="card-img-overlay">
+						<h4 class="card-title"></h4>
+						<p class="card-text"></p>
+						<p class="card-text"><small class="text-muted"></small></p>
+					</div>
+				</div>	
+			</div>
 		</div>
 	</div>
 
 <!-- Sales and Blog Section -->
-	<div class="container">
+<!-- TODO: loop the cat and if statement inside loop -->
+	<div class="container" id="blog">
 		<div class="row">
 			<div class="col-3">
 				<h3>Most Viewed</h3>
@@ -234,7 +245,7 @@ get_header(); ?>
 			</div>
 			<div class="col-3">
 				<h3>On Sale</h3>
-					<div class="owl-carousel owl-theme">
+					<div class=" on-sale owl-carousel owl-theme">
 						<div class="item"><h4>1</h4></div>
 						<div class="item"><h4>2</h4></div>
 						<div class="item"><h4>3</h4></div>

@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
 
 // Call Owl Carousel    
     $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
+        $(".owl-women").owlCarousel({
             loop: true,
             margin: 10,
             nav: true,
@@ -35,6 +35,63 @@ jQuery(document).ready(function ($) {
                 },
                 1000: {
                     items: 5
+                }
+            }
+        });
+        $(".owl-men").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+        $(".owl-arrivals").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+        $(".owl-featured").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+        $(".on-sale").owlCarousel({
+            loop: false,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 3
                 }
             }
         });
