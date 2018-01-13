@@ -86,16 +86,6 @@ get_header(); ?>
 			<div class="tab-content">
 				<div class="tab-pane fade show active" id="women" role="tabpanel" aria-labelledby="women-tab">
 					<div class="owl-carousel owl-theme">
-						<div class="item">
-							<div class="card mb-3">
-								<img class="card-img-top" src='<?php echo get_template_directory_uri() . "/images/lenses.jpg"?>' alt="Card image cap">
-								<img class="card-img-top img-top" src='<?php echo get_template_directory_uri() . "/images/lenses2.jpg"?>' alt="Card image cap">
-								<div class="card-block">
-									<h4 class="card-title">Fopo Designs Woolrich Klettersack</h4>
-									<p class="card-text"><small class="text-muted">$241.99</small></p>
-								</div>
-							</div>
-						</div>
 					<?php
 							$args = array(
 								'post_type' => 'product',
@@ -112,10 +102,9 @@ get_header(); ?>
 							}
 							wp_reset_postdata();
 						?>
-
-					</div>
-				
-				<div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">
+			</div>
+						
+				<div class="tab-pane fade" id="men" role="tabpanel" aria-labelledby="men-tab">
 					<div class="owl-carousel owl-theme">
 						<div class="item"><h4>6</h4></div>
 						<div class="item"><h4>7</h4></div>
@@ -124,28 +113,75 @@ get_header(); ?>
 						<div class="item"><h4>10</h4></div>
 					</div>
 				</div>
-			</div>
 
-	</div>
+		</div>
 
 	<!-- Featured Products listings widget -->
 	<!-- TODO: Widget WordPress Integration  and Card Stylings-->
 	<div class="container-fluid">
 		<div id="featured-products">
 			<div class="row">
-				<div class="col-6">
-					<h1>Hello Men's Clothing</h1>
-				</div>
-				<div class="col-6">
-					<div class="row">
-						<div class="col-6">Hello World</div>
-						<div class="col-6">Hello World</div>							
-					</div>
-					<div class="row">
-						<div class="col-6">Hello World</div>
-						<div class="col-6">Hello World</div>							
-					</div>
-				</div>
+				<?php
+				function grab_child_image($terms,$taxonomies,$args) {
+					// var_dump($terms,$taxonomies,$args); // debug
+					foreach ($terms as &$term) {
+					  $cp = new WP_Query(
+						array (
+						  'cat' => $term->term_id,
+						  'fields' => 'ids',
+						  'ignore_sticky_posts' => true
+						)
+					  );
+					  // var_dump($cp->posts); // debug
+					  if ($cp->have_posts()) {
+						$attach = new WP_Query(
+						  array (
+							'post_parent__in' => $cp->posts,
+							'post_type' => 'attachment',
+							'post_status' => 'inherit',
+							'ignore_sticky_posts' => true,
+							'posts_per_page' => 1
+						  )
+						);
+						if ($attach->have_posts()) {
+						  $term->image = wp_get_attachment_image($attach->posts[0]->ID);
+						} else {
+						  $term->image = 'some other image';
+						}
+					  }
+					}
+					return $terms;
+				  }
+				  add_filter('get_terms','grab_child_image',10,3);
+
+				$taxonomy     = 'product_cat';
+				$orderby      = 'name';  
+				$show_count   = 0;      // 1 for yes, 0 for no
+				$pad_counts   = 0;      // 1 for yes, 0 for no
+				$hierarchical = 1;      // 1 for yes, 0 for no  
+				$title        = '';  
+				$empty        = 0;
+
+				$args = array(
+						'taxonomy'     => $taxonomy,
+						'orderby'      => $orderby,
+						'show_count'   => $show_count,
+						'pad_counts'   => $pad_counts,
+						'hierarchical' => $hierarchical,
+						'title_li'     => $title,
+						'hide_empty'   => $empty
+				);
+				$all_categories = get_categories( $args );
+				foreach ($all_categories as $cat) {
+					if($cat->category_parent == 0) {
+						$category_id = $cat->term_id;       
+						echo '<br /><a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name  .'</a>';
+
+
+					}       
+				}
+				?>
+
 			</div>
 		</div>
 	</div>
