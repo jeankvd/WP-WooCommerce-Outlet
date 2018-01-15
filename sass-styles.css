@@ -1,6 +1,16 @@
 body {
   background-color: white;
+  font-family: "Poppins";
   color: #707070; }
+
+p {
+  font-size: 12px; }
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #23232c; }
 
 .navbar {
   background-color: transparent;
@@ -105,12 +115,31 @@ body {
   #featured-products ul {
     padding: 0;
     margin: 0;
+    margin-bottom: 50px;
+    border: none;
     display: inline-block; }
   #featured-products li {
     list-style: none;
     display: inline-block; }
+    #featured-products li a {
+      border: none;
+      font-size: 14px;
+      color: #707070; }
+    #featured-products li .active {
+      color: #23232c; }
   #featured-products li:not(first-child) {
     margin-right: 14px; }
+
+.card {
+  border: none; }
+  .card .woocommerce-loop-product__title {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 0; }
+    .card .woocommerce-loop-product__title:hover {
+      color: red; }
 
 .card:hover .attachment-shop_single {
   opacity: 1;
@@ -182,5 +211,5 @@ footer hr {
 
 .products .card {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 10px;
   width: 30%; }

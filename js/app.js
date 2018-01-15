@@ -28,13 +28,7 @@ jQuery(document).ready(function ($) {
             nav: true,
             responsive: {
                 0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
+                    items: 4
                 }
             }
         });
@@ -60,13 +54,7 @@ jQuery(document).ready(function ($) {
             nav: true,
             responsive: {
                 0: {
-                    items: 1
-                },
-                600: {
                     items: 3
-                },
-                1000: {
-                    items: 5
                 }
             }
         });
@@ -76,13 +64,7 @@ jQuery(document).ready(function ($) {
             nav: true,
             responsive: {
                 0: {
-                    items: 1
-                },
-                600: {
                     items: 3
-                },
-                1000: {
-                    items: 5
                 }
             }
         });

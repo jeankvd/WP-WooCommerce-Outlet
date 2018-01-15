@@ -1,15 +1,30 @@
 // Variables
-$body-color: #707070;
+$lighter-grey: #707070;
+$lighter-black: rgb(35, 35, 44);
 
 // Theme Styles
 
+// General
+
+body {
+	background-color: white;
+	font-family: "Poppins";
+	color: $lighter-grey;
+}
+
+p {
+	font-size: 12px;
+}
+
+h2 {
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $lighter-black;
+}
 
 
 // Header
-body {
-	background-color: white;
-	color: $body-color;
-}
 
 .navbar {
 	background-color: transparent;
@@ -142,22 +157,51 @@ body {
 }
 
 // Our Products WooCommerce
+
 #featured-products {
 	text-align: center;
 
 	ul {
 		padding: 0;
 		margin: 0;
+		margin-bottom: 50px;
+		border: none;
 		display: inline-block;
 	}
 
 	li {
 		list-style: none;
 		display: inline-block;
+
+		a {
+			border: none;
+			font-size: 14px;
+			color: $lighter-grey;
+		}
+
+		.active {
+			color: $lighter-black;
+		}
 	}
 
 	li:not(first-child) {
 		margin-right: 14px;
+	}
+}
+
+.card {
+	border: none;
+
+	.woocommerce-loop-product__title {
+		text-align: left;
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: capitalize;
+		padding: 0;
+
+		&:hover {
+			color: red;
+		}
 	}
 }
 
@@ -262,7 +306,7 @@ footer hr {
 	
 	.card {
 		display: inline-block;
-		margin-right: 25px;
+		margin-right: 10px;
 		width: 30%;
 	}
 }

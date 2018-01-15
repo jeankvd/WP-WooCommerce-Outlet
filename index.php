@@ -83,14 +83,14 @@ get_header(); ?>
 			</ul>
 		<!-- TODO: WP Integration -->
 			
-			<div class="tab-content">
+			<div class="tab-content container">
 				<div class="tab-pane fade show active" id="women" role="tabpanel" aria-labelledby="women-tab">
 					<div class="owl-women owl-carousel owl-theme">
 					<?php
 							$args = array(
 								'post_type' => 'product',
 								'posts_per_page' => 12,
-								'product_cat' => 'latest-arrivals',
+								'product_cat' => 'women',
 								);
 							$loop = new WP_Query( $args );
 							if ( $loop->have_posts() ) {
@@ -102,15 +102,69 @@ get_header(); ?>
 							}
 							wp_reset_postdata();
 						?>
-			</div>
+					</div>
+				</div>
 						
 				<div class="tab-pane fade" id="men" role="tabpanel" aria-labelledby="men-tab">
-					<div class="owl-men owl-carousel owl-theme">
-						<div class="item"><h4>6</h4></div>
-						<div class="item"><h4>7</h4></div>
-						<div class="item"><h4>8</h4></div>
-						<div class="item"><h4>9</h4></div>
-						<div class="item"><h4>10</h4></div>
+					<div class="owl-women owl-carousel owl-theme">
+					<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'men',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="kids" role="tabpanel" aria-labelledby="kids-tab">
+					<div class="owl-women owl-carousel owl-theme">
+					<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'kids',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="jewelry" role="tabpanel" aria-labelledby="jewelry-tab">
+					<div class="owl-women owl-carousel owl-theme">
+					<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'jewelry',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
 					</div>
 				</div>
 
@@ -118,7 +172,7 @@ get_header(); ?>
 
 	<!-- Featured Products listings widget -->
 	<!-- TODO: Widget WordPress Integration with images and Card Stylings-->
-	<div class="container-fluid">
+	<div class="container">
 		<div id="featured-products">
 			<div class="row">
 				<div class="col-6">
@@ -178,26 +232,48 @@ get_header(); ?>
 
 	<!-- Featured Products slider -->
 
-	<div class"container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-6">
 				<h3>Latest Arrivals</h3>
 				<div class="owl-arrivals owl-carousel owl-theme">
-					<div class="item"><h4>1</h4></div>
-					<div class="item"><h4>2</h4></div>
-					<div class="item"><h4>3</h4></div>
-					<div class="item"><h4>4</h4></div>
-					<div class="item"><h4>5</h4></div>
+				<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'latest-arrivals',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
 				</div>
 			</div>
 			<div class="col-6">
 				<h3>Featured Products</h3>
 				<div class="owl-featured owl-carousel owl-theme">
-					<div class="item"><h4>1</h4></div>
-					<div class="item"><h4>2</h4></div>
-					<div class="item"><h4>3</h4></div>
-					<div class="item"><h4>4</h4></div>
-					<div class="item"><h4>5</h4></div>
+				<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'featured',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
 				</div>	
 			</div>
 		</div>
@@ -205,7 +281,7 @@ get_header(); ?>
 
 <!-- Sales Images-->
 
-	<div class="container-fluid" >
+	<div class="container" >
 		<div class="row">
 			<div class="col-6">
 				<div class="card card-inverse">
@@ -236,20 +312,44 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-3">
 				<h3>Most Viewed</h3>
-				<div class="owl-carousel owl-theme">
-					<div class="item"><h4>1</h4></div>
-					<div class="item"><h4>2</h4></div>
-					<div class="item"><h4>3</h4></div>
-					<div class="item"><h4>4</h4></div>
+				<div class="owl-viewed owl-carousel owl-theme">
+						<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'most-viewed',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
 				</div>	
 			</div>
 			<div class="col-3">
 				<h3>On Sale</h3>
 					<div class=" on-sale owl-carousel owl-theme">
-						<div class="item"><h4>1</h4></div>
-						<div class="item"><h4>2</h4></div>
-						<div class="item"><h4>3</h4></div>
-						<div class="item"><h4>4</h4></div>
+						<?php
+							$args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 12,
+								'product_cat' => 'on-sale',
+								);
+							$loop = new WP_Query( $args );
+							if ( $loop->have_posts() ) {
+								while ( $loop->have_posts() ) : $loop->the_post();
+									wc_get_template_part( 'content', 'product' );
+								endwhile;
+							} else {
+								echo __( 'No products found' );
+							}
+							wp_reset_postdata();
+						?>
 					</div>	
 			</div>
 			<div class="col-6">
