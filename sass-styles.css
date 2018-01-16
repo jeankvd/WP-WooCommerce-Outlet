@@ -139,7 +139,20 @@ h2 {
     text-transform: capitalize;
     padding: 0; }
     .card .woocommerce-loop-product__title:hover {
-      color: red; }
+      color: #ee3333; }
+  .card .product_type_simple, .card .price {
+    text-align: left; }
+  .card .price {
+    color: #ee3333; }
+  .card .product_type_simple {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: -30px;
+    opacity: 0;
+    transition: all .5s ease-in-out; }
+  .card .woocommerce-LoopProduct-link {
+    text-decoration: none; }
 
 .card:hover .attachment-shop_single {
   opacity: 1;
@@ -148,6 +161,10 @@ h2 {
 .card:hover .item-buttons {
   opacity: 1;
   transition: opacity .5s ease; }
+
+.card:hover .product_type_simple {
+  opacity: 1;
+  left: 0; }
 
 .attachment-shop_single {
   position: absolute;

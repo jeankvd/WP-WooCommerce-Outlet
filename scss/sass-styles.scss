@@ -1,6 +1,7 @@
 // Variables
 $lighter-grey: #707070;
 $lighter-black: rgb(35, 35, 44);
+$link-hover: #ee3333;
 
 // Theme Styles
 
@@ -200,8 +201,29 @@ h2 {
 		padding: 0;
 
 		&:hover {
-			color: red;
+			color: $link-hover;
 		}
+	}
+
+	.product_type_simple , .price {
+		text-align: left;
+	}
+
+	.price {
+		color: $link-hover;
+	}
+
+	.product_type_simple {
+		position: absolute;
+		background-color: white;
+		bottom: 0;
+		left: -30px;
+		opacity: 0;
+		transition: all .5s ease-in-out;
+	}
+
+	.woocommerce-LoopProduct-link {
+		text-decoration: none;
 	}
 }
 
@@ -214,6 +236,11 @@ h2 {
 	.item-buttons {
 		opacity: 1;
 		transition: opacity .5s ease;
+	}
+
+	.product_type_simple {
+		opacity: 1;
+		left: 0;
 	}
 }
 
