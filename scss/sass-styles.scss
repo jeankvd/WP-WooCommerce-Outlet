@@ -150,10 +150,13 @@ h2 {
 
 // Sales Card deck
 #top-sales {
-	margin: 15px 10px!important;
+	margin: 20px 25px;
+}
+
+#top-sales , #bottom-sales {
 
 	.card:hover {
-		opacity: .8;
+		opacity: .75;
 	}
 }
 
@@ -285,13 +288,23 @@ h2 {
 	}
 
 	.card:hover {
-		filter: grayscale(.2);
+
+		img {
+			filter: brightness(.55);
+		}
 
 		.card-title {
+			color: white;
 			bottom: 10px;
 		}
 
+// Change this
+		.text-muted { 
+			color: white!important;
+		}
+
 		.card-text {
+			color: white!important;
 			opacity: .5;
 			bottom: 0;
 		}
@@ -312,6 +325,31 @@ h2 {
 
 	span {
 	color: red;
+	}
+}
+
+// Instagram feed
+
+.instagram-feed {
+	position: relative;
+	margin: 25px 0;
+
+	.col-3 {
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		z-index: 1;
+		// Temporary!!!!
+		margin: 0 46%; 
+		top: 50%;
+		display: inline-block;
+		color: white;
+		background-color: $lighter-black;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
 	}
 }
 
@@ -371,3 +409,8 @@ footer hr {
 		width: 30%;
 	}
 }
+
+// SHOP
+
+// Product filtering
+

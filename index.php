@@ -282,7 +282,7 @@ get_header(); ?>
 
 <!-- Sales Images-->
 
-	<div class="container" >
+	<div class="container" id="bottom-sales" >
 		<div class="row">
 			<div class="col-6">
 				<div class="card card-inverse">
@@ -362,7 +362,7 @@ get_header(); ?>
 
 <!-- Subscription -->
 
-	<div id="subscribe">
+	<div id="subscribe" class="container">
 		<p><span>Special Offer</span> for Subscribers</p>
 		<h3>10% Members Discount</h3>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
@@ -370,8 +370,20 @@ get_header(); ?>
 			<input type="email" name="email">
 			<a>Submit</a>
 		</form>
-		<div class="instagram-feed">
-			instagram feed
+		<div class="instagram-feed row">
+			<span>Instagram</span>
+			<div class="col-3">
+				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-3">
+				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-3">
+				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-3">
+				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
 		</div>
 	</div>
 
