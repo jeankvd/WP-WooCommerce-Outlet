@@ -264,6 +264,40 @@ h2 {
 	}
 }
 
+// Featured Categories
+
+#featured-categories {
+	text-align: left;
+
+	.card-title, .card-text{
+		position: absolute;
+	}
+
+	.card-title {
+		transition: all .3s ease-in-out;			
+		bottom: 0;
+	}
+
+	.card-text {
+		transition: all .3s ease-in-out;		
+		opacity: 0;
+		bottom: -10px;
+	}
+
+	.card:hover {
+		filter: grayscale(.2);
+
+		.card-title {
+			bottom: 10px;
+		}
+
+		.card-text {
+			opacity: .5;
+			bottom: 0;
+		}
+	}
+}
+
 // Bottom Widget, Most Viewed, Sale and Blog
 
 #blog {

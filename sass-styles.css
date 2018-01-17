@@ -182,6 +182,25 @@ h2 {
     display: block;
     margin-bottom: 5px; }
 
+#featured-categories {
+  text-align: left; }
+  #featured-categories .card-title, #featured-categories .card-text {
+    position: absolute; }
+  #featured-categories .card-title {
+    transition: all .3s ease-in-out;
+    bottom: 0; }
+  #featured-categories .card-text {
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    bottom: -10px; }
+  #featured-categories .card:hover {
+    filter: grayscale(0.2); }
+    #featured-categories .card:hover .card-title {
+      bottom: 10px; }
+    #featured-categories .card:hover .card-text {
+      opacity: .5;
+      bottom: 0; }
+
 #blog .item {
   display: block; }
 

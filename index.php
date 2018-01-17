@@ -169,15 +169,16 @@ get_header(); ?>
 				</div>
 
 		</div>
+	</div>
 
 	<!-- Featured Products listings widget -->
 	<!-- TODO: Widget WordPress Integration with images and Card Stylings-->
 	<div class="container">
-		<div id="featured-products">
+		<div id="featured-categories">
 			<div class="row">
 				<div class="col-6">
 					<div class="card card-inverse">
-						<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+						<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img1-middle-nego1.jpg") ?>' alt="Card image">
 						<div class="card-img-overlay">
 							<h4 class="card-title">Card title</h4>
 							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -188,7 +189,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-6">
 							<div class="card card-inverse">
-								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img2-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
 									<h4 class="card-title">Card title</h4>
 									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -197,7 +198,7 @@ get_header(); ?>
 						</div>
 						<div class="col-6">
 							<div class="card card-inverse">
-								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img3-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
 									<h4 class="card-title">Card title</h4>
 									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -208,7 +209,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-6">
 							<div class="card card-inverse">
-								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img4-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
 									<h4 class="card-title">Card title</h4>
 									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -217,7 +218,7 @@ get_header(); ?>
 						</div>
 						<div class="col-6">
 							<div class="card card-inverse">
-								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="Card image">
+								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img5-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
 									<h4 class="card-title">Card title</h4>
 									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
