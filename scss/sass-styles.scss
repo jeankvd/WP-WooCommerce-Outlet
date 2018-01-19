@@ -160,7 +160,7 @@ h2 {
 	}
 }
 
-// Our Products WooCommerce
+// Our Products WooCommerce and Shop styles
 
 #featured-products {
 	text-align: center;
@@ -414,3 +414,44 @@ footer hr {
 
 // Product filtering
 
+#shop {
+	background-color: white!important;
+	padding: 25px;
+	margin-top: -100px;
+}
+
+%shop-titles {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	color: white;
+}
+
+.woocommerce-products-header__title {
+	@extend %shop-titles;
+	top: 150px;
+}
+
+
+ .woocommerce-products-header .woocommerce-breadcrumb {
+	 @extend %shop-titles;
+	 top: 200px;
+ }
+
+ .woocommerce .woocommerce-breadcrumb a {
+	 color: white;
+ }
+
+
+.widget_product_categories {
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+}

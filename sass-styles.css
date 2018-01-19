@@ -271,3 +271,31 @@ footer hr {
   display: inline-block;
   margin-right: 10px;
   width: 30%; }
+
+#shop {
+  background-color: white !important;
+  padding: 25px;
+  margin-top: -100px; }
+
+.woocommerce-products-header__title, .woocommerce-products-header .woocommerce-breadcrumb {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: white; }
+
+.woocommerce-products-header__title {
+  top: 150px; }
+
+.woocommerce-products-header .woocommerce-breadcrumb {
+  top: 200px; }
+
+.woocommerce .woocommerce-breadcrumb a {
+  color: white; }
+
+.widget_product_categories ul {
+  padding: 0;
+  margin: 0; }
+
+.widget_product_categories li {
+  list-style: none; }

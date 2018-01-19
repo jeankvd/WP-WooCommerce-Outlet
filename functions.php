@@ -173,3 +173,5 @@ function woocommerce_support() {
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
