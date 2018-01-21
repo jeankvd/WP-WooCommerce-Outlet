@@ -176,7 +176,7 @@ get_header(); ?>
 	<div class="container">
 		<div id="featured-categories">
 			<div class="row">
-				<div class="col-6">
+				<div class="col-md-6 col-sm-12">
 					<div class="card card-inverse">
 						<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img1-middle-nego1.jpg") ?>' alt="Card image">
 						<div class="card-img-overlay">
@@ -185,9 +185,9 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="col-6">
+				<div class="col-md-6 col-sm-12">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-md-6 col-sm-12">
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img2-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
@@ -196,7 +196,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-md-6 col-sm-12">
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img3-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
@@ -207,7 +207,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-md-6 col-sm-12">
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img4-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
@@ -216,7 +216,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-md-6 col-sm-12">
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img5-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
@@ -235,7 +235,7 @@ get_header(); ?>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12">
 				<h3>Latest Arrivals</h3>
 				<div class="owl-arrivals owl-carousel owl-theme">
 				<?php
@@ -256,7 +256,7 @@ get_header(); ?>
 						?>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12">
 				<h3>Featured Products</h3>
 				<div class="owl-featured owl-carousel owl-theme">
 				<?php
@@ -284,7 +284,7 @@ get_header(); ?>
 
 	<div class="container" id="bottom-sales" >
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12">
 				<div class="card card-inverse">
 					<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/bottom.jpg") ?>'  alt="Card image">
 					<div class="card-img-overlay">
@@ -294,7 +294,7 @@ get_header(); ?>
 					</div>
 				</div>	
 			</div>
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12">
 				<div class="card card-inverse">
 					<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/bottom2.jpg") ?>'  alt="Card image">
 					<div class="card-img-overlay">
@@ -311,7 +311,7 @@ get_header(); ?>
 <!-- TODO: loop the cat and if statement inside loop -->
 	<div class="container" id="blog">
 		<div class="row">
-			<div class="col-3">
+			<div class="col-md-3 col-sm-12">
 				<h3>Most Viewed</h3>
 				<div class="owl-viewed owl-carousel owl-theme">
 						<?php
@@ -332,7 +332,7 @@ get_header(); ?>
 						?>
 				</div>	
 			</div>
-			<div class="col-3">
+			<div class="col-md-3 col-sm-12">
 				<h3>On Sale</h3>
 					<div class=" on-sale owl-carousel owl-theme">
 						<?php
@@ -353,7 +353,7 @@ get_header(); ?>
 						?>
 					</div>	
 			</div>
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12">
 				<h3>Our Blog</h3>
 				<div>Cards</div>
 			</div>

@@ -28,6 +28,9 @@ jQuery(document).ready(function ($) {
             nav: true,
             responsive: {
                 0: {
+                    items: 1
+                },
+                800: {
                     items: 4
                 }
             }
@@ -40,11 +43,8 @@ jQuery(document).ready(function ($) {
                 0: {
                     items: 1
                 },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
+                800: {
+                    items: 4
                 }
             }
         });
@@ -54,7 +54,10 @@ jQuery(document).ready(function ($) {
             nav: true,
             responsive: {
                 0: {
-                    items: 3
+                    items: 1
+                },
+                800: {
+                    items: 4
                 }
             }
         });
@@ -64,7 +67,10 @@ jQuery(document).ready(function ($) {
             nav: true,
             responsive: {
                 0: {
-                    items: 3
+                    items: 1
+                },
+                800: {
+                    items: 4
                 }
             }
         });
@@ -73,7 +79,10 @@ jQuery(document).ready(function ($) {
             margin: 10,
             responsive: {
                 0: {
-                    items: 3
+                    items: 1
+                },
+                800: {
+                    items: 4
                 }
             }
         });
