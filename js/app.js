@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
     $(window).load(function() {
         $('#slider').nivoSlider({
             prevText: '<',
-            nextText: '>'  
+            nextText: '>'
         });
     });
 
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
                     items: 1
                 },
                 800: {
-                    items: 4
+                    items: 3
                 }
             }
         });
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
                     items: 1
                 },
                 800: {
-                    items: 4
+                    items: 3
                 }
             }
         });
@@ -80,9 +80,24 @@ jQuery(document).ready(function ($) {
             responsive: {
                 0: {
                     items: 1
-                },
-                800: {
-                    items: 4
+                }
+            }
+        });
+        $(".owl-viewed").owlCarousel({
+            loop: false,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+        $(".blog-entries").owlCarousel({
+            loop: false,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
                 }
             }
         });

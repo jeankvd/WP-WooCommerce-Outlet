@@ -20,11 +20,28 @@ get_header(); ?>
 	<main id="main" class="site-main">
 		<!-- Hero Banner -->
 		<!-- TODO: Make Images ACF on WP & Add Text -->
+		<!-- Nivo will take all text inside the title attribute and convert it to HTML -->
 	<div id="slider-parent">
 		<div id="slider" class="nivoSlider">
-			<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-			<img src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' alt="" title="This is an example of a caption" />
-			<img src='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="" data-transition="slideInLeft" />
+			<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' title="<div id='first-caption'>
+			<span class='animated slideInRight'>Sale Off This Week</span>
+			<h2 class='animated slideInRight'>Summer Collection</h2>
+			<p class='animated slideInLeft'>Lorem ipsum dolor, sit amet consec\tetur adipisicing elit. Labore Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore</p>
+			<a class='btn btn-secondary animated slideInUp'>Shopping Now</button>
+		</div>" data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			
+			<img src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' title="<div id='second-caption'>
+			<span class='animated rollIn'>Sale Off This Week</span>
+			<h2 class='animated slideInDown'>Summer Collection</h2>
+			<p class='animated slideInDown'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore</p>
+			<a class='btn animated slideInUp'>Shopping Now</button>
+		</div>" data-thumb='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' alt="" title="This is an example of a caption" />
+			<img src='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' title="<div id='third-caption'>
+			<span class='animated slideInRight'>Sale Off This Week</span>
+			<h2 class='animated bounceIn'>Summer Collection</h2>
+			<p class='animated bounceIn'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore</p>
+			<a class='btn animated slideInUp'>Shopping Now</button>
+		</div>" data-thumb='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="" data-transition="slideInLeft" />
 		</div>
 	</div>
 
@@ -314,7 +331,9 @@ get_header(); ?>
 			<div class="col-md-3 col-sm-12">
 				<h3>Most Viewed</h3>
 				<div class="owl-viewed owl-carousel owl-theme">
+					<div>
 						<?php
+							$index = 0;
 							$args = array(
 								'post_type' => 'product',
 								'posts_per_page' => 12,
@@ -323,6 +342,10 @@ get_header(); ?>
 							$loop = new WP_Query( $args );
 							if ( $loop->have_posts() ) {
 								while ( $loop->have_posts() ) : $loop->the_post();
+									if ($index !== 0 && $index % 3 == 0) { 
+										echo "</div><div>";
+									}
+									$index++;
 									wc_get_template_part( 'content', 'product' );
 								endwhile;
 							} else {
@@ -330,12 +353,15 @@ get_header(); ?>
 							}
 							wp_reset_postdata();
 						?>
+						</div>	
 				</div>	
 			</div>
 			<div class="col-md-3 col-sm-12">
 				<h3>On Sale</h3>
 					<div class=" on-sale owl-carousel owl-theme">
+						<div>
 						<?php
+							$index = 0;
 							$args = array(
 								'post_type' => 'product',
 								'posts_per_page' => 12,
@@ -344,6 +370,10 @@ get_header(); ?>
 							$loop = new WP_Query( $args );
 							if ( $loop->have_posts() ) {
 								while ( $loop->have_posts() ) : $loop->the_post();
+									if ($index !== 0 && $index % 3 == 0) { 
+										echo "</div><div>";
+									}
+									$index++;
 									wc_get_template_part( 'content', 'product' );
 								endwhile;
 							} else {
@@ -351,11 +381,39 @@ get_header(); ?>
 							}
 							wp_reset_postdata();
 						?>
+						</div>
 					</div>	
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<h3>Our Blog</h3>
-				<div>Cards</div>
+				<div class="blog-entries owl-carousel owl-theme container-fluid">
+					<div class='row'>
+						<?php 
+							$index = 0;
+							if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+								if ($index !== 0 && $index % 2 == 0) { 
+									echo "</div><div class='row'>";
+								}
+
+							$index++;
+								echo "<div class='col-6'>
+									<div>" .
+										the_post_thumbnail() .
+									"</div>
+								</div>
+								<div class='col-6'>
+									<h4>" . the_title() . "</h4>
+									<span>" . the_author() . "</span>
+									<p>" . the_excerpt() . "</p>
+								</div>";					
+							endwhile;
+							else :
+								_e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+							endif;
+						?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,3 +1,4 @@
+<header class=" woocommerce-products-header" style="background-image: url(<?php echo get_template_directory_uri() . '/images/shop-header.jpg' ?>); background-position: center; min-height:400px;" >
 <?php
 /**
  * Checkout Form
@@ -26,7 +27,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	return;
 }
 ?>
+	<h1 id="wc-title">Cart</h1>
 
+</header>
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
 	<?php if ( $checkout->get_checkout_fields() ) : ?>
@@ -34,11 +37,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="row" id="customer_details">
-			<div class="col-8">
+			<div class="col-md-8 col-sm-12">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
 
-			<div class="col-3">
+			<div class="col-md-3 col-sm-12">
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 			</div>
 		</div>

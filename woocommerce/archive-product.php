@@ -55,7 +55,7 @@ get_header( 'shop' ); ?>
 	
 <div class="container" id="shop">	
 	<div class="row">
-		<div class="col-9">
+		<div class="col-md-9 col-sm-12">
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -111,7 +111,7 @@ get_header( 'shop' ); ?>
 
 		<?php endif; ?>
 		</div>
-		<div class="col-3 order-first">
+		<div class="col-md-3  col-sm-12 order-first">
 			<?php do_action( 'woocommerce_sidebar' );?>
 		</div>
 	</div>
