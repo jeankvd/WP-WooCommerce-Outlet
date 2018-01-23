@@ -17,6 +17,10 @@ jQuery(document).ready(function ($) {
             prevText: '<',
             nextText: '>'
         });
+
+    $("#menu-btn").click(function(){
+            $("#primary-menu").toggleClass("menu-show");
+        });
     });
 
 
@@ -25,7 +29,6 @@ jQuery(document).ready(function ($) {
         $(".owl-women").owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
             responsive: {
                 0: {
                     items: 1
@@ -38,7 +41,6 @@ jQuery(document).ready(function ($) {
         $(".owl-men").owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
             responsive: {
                 0: {
                     items: 1
@@ -51,7 +53,6 @@ jQuery(document).ready(function ($) {
         $(".owl-arrivals").owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
             responsive: {
                 0: {
                     items: 1
@@ -64,7 +65,6 @@ jQuery(document).ready(function ($) {
         $(".owl-featured").owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
             responsive: {
                 0: {
                     items: 1

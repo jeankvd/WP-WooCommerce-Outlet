@@ -22,7 +22,7 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();?>
-	<header class=" woocommerce-products-header" style="background-image: url(<?php echo get_template_directory_uri() . '/images/shop-header.jpg' ?>); background-position: center; min-height:400px;" >
+	<header class=" woocommerce-products-header" style="background-image: url(<?php echo get_template_directory_uri() . '/images/header2.jpg' ?>); background-position: center; min-height:400px;" >
 		<h1 id="wc-title"><?php single_post_title(); ?></h1>
 	</header>
 

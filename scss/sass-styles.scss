@@ -1,7 +1,8 @@
 // Variables
 $lighter-grey: #707070;
 $lighter-black: rgb(35, 35, 44);
-$link-hover: #ee3333;
+$link-hover: #ee3333; 
+$nav-color: rgba(29, 28, 28, 0.67);	
 
 // Theme Styles
 
@@ -13,28 +14,38 @@ body {
 	color: $lighter-grey;
 }
 
+a:visited {
+	color: inherit;
+}
+
 p {
 	font-size: 12px;
 }
 
-h2 {
+h2, h3 {
 	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: $lighter-black;
 }
 
+#subscribe, #blog, #bottom-sales,  #arrivals, #categories, {
+	margin-top: 50px;
+}
+
 
 // Header
 
 .navbar {
-	background-color: transparent;
+	background-color: $nav-color;
 	position: absolute;
-	padding-left: 100px;
-	padding-right: 100px;
-	top: 50px;
+	top: 0px;
 	z-index: 10000;
 	height: 30px;
+	margin-top: 0;
+	display: none;
+	transition: all .3s ease-in-out;
+	
 
 	li {
 		display: inline-block;
@@ -50,6 +61,11 @@ h2 {
 		}
 	}
 
+	#nav-cart {
+		color: white;
+		font-size: 18px;
+	}
+
 	.menu-item a:hover {
 		text-decoration: none;
 		border-bottom: white 3px solid;
@@ -57,10 +73,11 @@ h2 {
 	}
 
 	&.scrolled {
+		display: flex;
 		position: fixed;
 		top: 0; 
 		height: 54px;
-		background-color: rgba($color: black, $alpha: .20);
+		background-color: $nav-color;
 		z-index: 10000;	
 		// Fade In Down animate.css demodule
 		// TODO: demodule keyframes
@@ -465,10 +482,6 @@ h2 {
 // Subscription
 #subscribe {
 	text-align: center;
-
-	span {
-	color: red;
-	}
 }
 
 // Instagram feed
@@ -478,23 +491,26 @@ h2 {
 	margin: 25px 0;
 
 	.col-2 {
-		height: 100px;
-		width: 100px;
 		margin: 0;
 		padding: 0;
+
+		&:hover {
+			opacity: .7;
+		}
 	}
 
-	span {
+	span  {
 		z-index: 1;
-		// Temporary!!!!
-		margin: 0 46%; 
 		top: 50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
 		display: inline-block;
 		color: white;
 		background-color: $lighter-black;
 		position: absolute;
-		bottom: 0;
 		text-align: center;
+		padding: 5px 10px;
 	}
 }
 
@@ -509,6 +525,51 @@ footer {
 	width: 100%;
 	bottom: 0px;
 	padding: 3% 0;
+	font-family: "Poppins";
+
+	h4 {
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	hr {
+		margin-top: 40px;
+	}
+
+	p {
+		color: $lighter-grey;
+		margin-bottom: 0;
+	}
+
+	a {
+		font-size: 12px;
+		margin-bottom: 10px;
+		color: $link-hover;
+	}
+}
+
+#social-widget {
+	$social-bg: #2e2e2e;
+	margin-top: 10px;
+
+	i {
+		transition: all .3s ease-in-out;
+		margin-right: 3px;
+		font-size: 18px;
+		background-color: $social-bg;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		padding-top: 11px;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $link-hover;
+			color: white;
+		}
+	}
 }
 .information-ul ul, #popular-tags ul {
 	padding: 0;
@@ -519,6 +580,11 @@ footer {
 	list-style: none;
 	display: block;
 	transition: ease-in-out all .3s;
+	color: $lighter-grey;
+	font-size: 12px;
+	margin: 5px 0;
+	padding: 2px;
+	cursor: pointer;
 }
 
 .information-ul li:hover {
@@ -542,6 +608,11 @@ footer hr {
 
 #credit-cards {
 	text-align: right;
+
+	i {
+		color: white;
+		font-size: 28px;
+	}
 }
 
 // Shop
@@ -814,6 +885,60 @@ body.single-product .woocommerce-Price-amount {
 and (min-width: 320px)
 and (max-width: 736px)
 and (-webkit-min-device-pixel-ratio: 1) {
+
+	/* Navbar */
+
+	.navbar {
+		display: none;
+		padding: 0;
+	}
+
+	.nivo-caption {
+		display: none;
+	}
+
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.scrolled {
+		display: flex;
+	}
+
+	.scrolled .menu-toggle {
+		display: inline-block;
+		background-color: $lighter-black;
+		color: white;
+		border: none;
+		margin-left: 5px;
+	}
+
+	.menu-show {
+		transition: all .2s ease-in-out;
+		background-color: $nav-color;
+
+		li {
+			display: block;
+			width: 100%;
+		}
+
+		ul {
+			display: block;
+		}
+	}
+
+	#nav-cart {
+		display: none;
+	}
+
+	#logo {
+		display: none;
+	}
+
+	#categories .card {
+		margin-bottom: 20px;
+	}
 
 	.products .card {
 		margin: 0 auto;

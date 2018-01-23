@@ -26,15 +26,15 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation navbar">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'theme-boilerplate' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="menu-btn"><?php esc_html_e( 'Menu', 'theme-boilerplate' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
-			<div id="logo">Logo</div>
-			<div id="nav-cart">Shop Cart</div>
+			<div id="logo"><img src="<?php echo get_template_directory_uri() . '/images/logo.png' ?>" alt=""></div>
+			<div id="nav-cart"><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

@@ -31,14 +31,14 @@ get_header(); ?>
 		</div>" data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
 			
 			<img src='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' title="<div id='second-caption'>
-			<span class='animated rollIn'>Sale Off This Week</span>
-			<h2 class='animated slideInDown'>Summer Collection</h2>
+			<span class='animated rollIn'>Only in Our Store</span>
+			<h2 class='animated slideInDown'>Perfect Outerwear</h2>
 			<p class='animated slideInDown'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore</p>
 			<a class='btn animated slideInUp'>Shopping Now</button>
 		</div>" data-thumb='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' alt="" title="This is an example of a caption" />
 			<img src='<?php echo(get_template_directory_uri() ."/images/download-2.jpg") ?>' title="<div id='third-caption'>
-			<span class='animated slideInRight'>Sale Off This Week</span>
-			<h2 class='animated bounceIn'>Summer Collection</h2>
+			<span class='animated slideInRight'>-10% this Week</span>
+			<h2 class='animated bounceIn'>Dress Shirt Nego</h2>
 			<p class='animated bounceIn'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore</p>
 			<a class='btn animated slideInUp'>Shopping Now</button>
 		</div>" data-thumb='<?php echo(get_template_directory_uri() ."/images/download-1.jpg") ?>' alt="" data-transition="slideInLeft" />
@@ -190,15 +190,15 @@ get_header(); ?>
 
 	<!-- Featured Products listings widget -->
 	<!-- TODO: Widget WordPress Integration with images and Card Stylings-->
-	<div class="container">
+	<div class="container" id="categories">
 		<div id="featured-categories">
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<div class="card card-inverse">
 						<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img1-middle-nego1.jpg") ?>' alt="Card image">
 						<div class="card-img-overlay">
-							<h4 class="card-title">Card title</h4>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							<h4 class="card-title">Clothing's for Men</h4>
+							<p class="card-text"><small class="text-muted">Discover Now </small></p>
 						</div>
 					</div>
 				</div>
@@ -208,8 +208,8 @@ get_header(); ?>
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img2-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
-									<h4 class="card-title">Card title</h4>
-									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									<h4 class="card-title">Slip On</h4>
+									<p class="card-text"><small class="text-muted">Discover Now</small></p>
 								</div>
 							</div>
 						</div>
@@ -217,8 +217,8 @@ get_header(); ?>
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img3-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
-									<h4 class="card-title">Card title</h4>
-									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									<h4 class="card-title">HandBags</h4>
+									<p class="card-text"><small class="text-muted">Discover Now</small></p>
 								</div>
 							</div>
 						</div>
@@ -228,8 +228,8 @@ get_header(); ?>
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img4-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
-									<h4 class="card-title">Card title</h4>
-									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									<h4 class="card-title">Accesories</h4>
+									<p class="card-text"><small class="text-muted">Discover Now</small></p>
 								</div>
 							</div>
 						</div>
@@ -237,8 +237,8 @@ get_header(); ?>
 							<div class="card card-inverse">
 								<img class="card-img" src='<?php echo(get_template_directory_uri() ."/images/img5-middle-nego1.jpg") ?>' alt="Card image">
 								<div class="card-img-overlay">
-									<h4 class="card-title">Card title</h4>
-									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									<h4 class="card-title">Sun Glasses</h4>
+									<p class="card-text"><small class="text-muted">Discover Now</small></p>
 								</div>
 							</div>
 						</div>
@@ -250,7 +250,7 @@ get_header(); ?>
 
 	<!-- Featured Products slider -->
 
-	<div class="container">
+	<div class="container" id="arrivals">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
 				<h3>Latest Arrivals</h3>
@@ -418,38 +418,6 @@ get_header(); ?>
 		</div>
 	</div>
 
-<!-- Subscription -->
-
-	<div id="subscribe" class="container">
-		<p><span>Special Offer</span> for Subscribers</p>
-		<h3>10% Members Discount</h3>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-		<form>
-			<input type="email" name="email">
-			<a>Submit</a>
-		</form>
-		<div class="instagram-feed row">
-			<span>Instagram</span>
-			<div class="col-2">
-				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-            </div>
-            <div class="col-2">
-				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-			</div>
-            <div class="col-2">
-				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-			</div>
-			<div class="col-2">
-				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-			</div>
-			<div class="col-2">
-				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-			</div>
-			<div class="col-2">
-				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
-			</div>
-		</div>
-	</div>
 
 
 	</main><!-- #main -->

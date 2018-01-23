@@ -3,23 +3,30 @@ body {
   font-family: "Poppins";
   color: #707070; }
 
+a:visited {
+  color: inherit; }
+
 p {
   font-size: 12px; }
 
-h2 {
+h2, h3 {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
   color: #23232c; }
 
+#subscribe, #blog, #bottom-sales, #arrivals, #categories {
+  margin-top: 50px; }
+
 .navbar {
-  background-color: transparent;
+  background-color: rgba(29, 28, 28, 0.67);
   position: absolute;
-  padding-left: 100px;
-  padding-right: 100px;
-  top: 50px;
+  top: 0px;
   z-index: 10000;
-  height: 30px; }
+  height: 30px;
+  margin-top: 0;
+  display: none;
+  transition: all .3s ease-in-out; }
   .navbar li {
     display: inline-block;
     margin-right: 18px; }
@@ -28,15 +35,19 @@ h2 {
     .navbar li a {
       color: white;
       margin-bottom: 3px; }
+  .navbar #nav-cart {
+    color: white;
+    font-size: 18px; }
   .navbar .menu-item a:hover {
     text-decoration: none;
     border-bottom: white 3px solid;
     margin-bottom: 0px; }
   .navbar.scrolled {
+    display: flex;
     position: fixed;
     top: 0;
     height: 54px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(29, 28, 28, 0.67);
     z-index: 10000;
     -webkit-animation-name: fadeInDown;
     -webkit-animation-duration: 5.0s;
@@ -307,27 +318,27 @@ h2 {
 
 #subscribe {
   text-align: center; }
-  #subscribe span {
-    color: red; }
 
 .instagram-feed {
   position: relative;
   margin: 25px 0; }
   .instagram-feed .col-2 {
-    height: 100px;
-    width: 100px;
     margin: 0;
     padding: 0; }
+    .instagram-feed .col-2:hover {
+      opacity: .7; }
   .instagram-feed span {
     z-index: 1;
-    margin: 0 46%;
     top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     display: inline-block;
     color: white;
     background-color: #23232c;
     position: absolute;
-    bottom: 0;
-    text-align: center; }
+    text-align: center;
+    padding: 5px 10px; }
 
 footer {
   background-color: #23232c;
@@ -335,7 +346,38 @@ footer {
   position: relative;
   width: 100%;
   bottom: 0px;
-  padding: 3% 0; }
+  padding: 3% 0;
+  font-family: "Poppins"; }
+  footer h4 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  footer hr {
+    margin-top: 40px; }
+  footer p {
+    color: #707070;
+    margin-bottom: 0; }
+  footer a {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #ee3333; }
+
+#social-widget {
+  margin-top: 10px; }
+  #social-widget i {
+    transition: all .3s ease-in-out;
+    margin-right: 3px;
+    font-size: 18px;
+    background-color: #2e2e2e;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 11px;
+    border-radius: 50%;
+    cursor: pointer; }
+    #social-widget i:hover {
+      background-color: #ee3333;
+      color: white; }
 
 .information-ul ul, #popular-tags ul {
   padding: 0;
@@ -344,7 +386,12 @@ footer {
 .information-ul li {
   list-style: none;
   display: block;
-  transition: ease-in-out all .3s; }
+  transition: ease-in-out all .3s;
+  color: #707070;
+  font-size: 12px;
+  margin: 5px 0;
+  padding: 2px;
+  cursor: pointer; }
 
 .information-ul li:hover {
   color: red;
@@ -364,6 +411,9 @@ footer hr {
 
 #credit-cards {
   text-align: right; }
+  #credit-cards i {
+    color: white;
+    font-size: 28px; }
 
 .products .card {
   display: inline-block;
@@ -552,6 +602,36 @@ body.single-product .woocommerce-Price-amount {
 
 /* 	Media Queries */
 @media only screen and (min-width: 320px) and (max-width: 736px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* Navbar */
+  .navbar {
+    display: none;
+    padding: 0; }
+  .nivo-caption {
+    display: none; }
+  .menu-toggle {
+    display: none; }
+  .scrolled {
+    display: flex; }
+  .scrolled .menu-toggle {
+    display: inline-block;
+    background-color: #23232c;
+    color: white;
+    border: none;
+    margin-left: 5px; }
+  .menu-show {
+    transition: all .2s ease-in-out;
+    background-color: rgba(29, 28, 28, 0.67); }
+    .menu-show li {
+      display: block;
+      width: 100%; }
+    .menu-show ul {
+      display: block; }
+  #nav-cart {
+    display: none; }
+  #logo {
+    display: none; }
+  #categories .card {
+    margin-bottom: 20px; }
   .products .card {
     margin: 0 auto;
     width: 100%; }

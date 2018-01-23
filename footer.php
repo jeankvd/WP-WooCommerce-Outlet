@@ -11,6 +11,40 @@
 
 ?>
 
+<!-- Subscription -->
+
+<div id="subscribe" class="container">
+		<p><span>Special Offer</span> for Subscribers</p>
+		<h3>10% Members Discount</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+		<form>
+			<input type="email" name="email">
+			<a>Submit</a>
+		</form>
+		<div class="instagram-feed row">
+			<span><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</span>
+			<div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/1.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+            </div>
+            <div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/2.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+            <div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/3.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/4.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/5.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/6.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+		</div>
+	</div>
+
+
 	</div><!-- #content -->
 
 <footer>
@@ -22,25 +56,33 @@
 				<a href="">Redmore</a>
 				<div id="social-widget">
 					<h4>Follow Us on Social Media</h4>
-					<p>Social Links</p>
+					<p>
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						<i class="fa fa-google-plus" aria-hidden="true"></i>
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+						<i class="fa fa-youtube" aria-hidden="true"></i>
+						<i class="fa fa-flickr" aria-hidden="true"></i>
+					</p>
 				</div>
 			</div>
 			<div class="col-md-2 information-ul">
 				<h4>Information</h4>
 				<ul>
-					<li>Information</li>
-					<li>Information</li>
-					<li>Information</li>
-					<li>Information</li>
+					<li>About Us</li>
+					<li>Delivery Information</li>
+					<li>Privacy Policy</li>
+					<li>Terms & Conditions</li>
+					<li>Gifts Cetificates</li>					
 				</ul>
 			</div>
 			<div class="col-md-2 information-ul">
-				<h4>Information</h4>
+				<h4>My Account</h4>
 				<ul>
-					<li>Information</li>
-					<li>Information</li>
-					<li>Information</li>
-					<li>Information</li>
+					<li>My Account</li>
+					<li>Order History</li>
+					<li>Affiliates</li>
+					<li>Newsletter</li>
+					<li>Brands</li>					
 				</ul>
 			</div>
 			<div class="col-md-3" id="popular-tags">
@@ -59,7 +101,13 @@
 				<span>Copyright &copy2017 Jean Villalobos</span>
 			</div>
 			<div class="col-md-6" id="credit-cards">
-				<span>Credit Cards we accept</span>
+				<p>
+					<i class="fa fa-cc-visa" aria-hidden="true"></i>
+					<i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+					<i class="fa fa-cc-paypal" aria-hidden="true"></i>
+					<i class="fa fa-cc-stripe" aria-hidden="true"></i>
+					<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+				</p>
 			</div>
 		</div>
 	</div>
