@@ -280,7 +280,7 @@ get_header(); ?>
 							$args = array(
 								'post_type' => 'product',
 								'posts_per_page' => 12,
-								'product_cat' => 'featured',
+								'product_cat' => 'featured-products',
 								);
 							$loop = new WP_Query( $args );
 							if ( $loop->have_posts() ) {
@@ -387,16 +387,25 @@ get_header(); ?>
 			<div class="col-md-6 col-sm-12">
 				<h3>Our Blog</h3>
 				<div class="blog-entries owl-carousel owl-theme container-fluid">
-					<div class="row">
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+					<div class="row home-blog">
+                        <?php
+                        $index = 0;
+                        
+                        if ( have_posts() ) : while ( have_posts() ) : the_post();
+                        
+                        if ($index !== 0 && $index % 2 == 0) { 
+                            echo "</div><div class='row home-blog' >";
+                        }
+                        $index++;
+                        ?>
+                        
 
 						<div class="col-12">
 							<div class="col-6 img-fluid">
-								<?php the_post_thumbnail('thumbnail'); ?>
+								<?php the_post_thumbnail('medium'); ?>
 							</div>
 							<div class=col-6>
 								<h4><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h4>
-								<hr>
 								<p><?php the_excerpt() ?></p>
 							</div>
 						</div>
@@ -421,16 +430,22 @@ get_header(); ?>
 		</form>
 		<div class="instagram-feed row">
 			<span>Instagram</span>
-			<div class="col-3">
+			<div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+            </div>
+            <div class="col-2">
 				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
 			</div>
-			<div class="col-3">
+            <div class="col-2">
 				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
 			</div>
-			<div class="col-3">
+			<div class="col-2">
 				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
 			</div>
-			<div class="col-3">
+			<div class="col-2">
+				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
+			</div>
+			<div class="col-2">
 				<img src='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' data-thumb='<?php echo(get_template_directory_uri() ."/images/download.jpg") ?>' alt="" />
 			</div>
 		</div>

@@ -11,25 +11,33 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+		<header class=" woocommerce-products-header" style="background-image: url(<?php echo get_template_directory_uri() . '/images/shop-header.jpg' ?>); background-position: center; min-height:400px;" >
+		<h1 id="wc-title">Blog</h1>
+	    </header>
+		<div class="container" id="blog-content">
+			<div class="row">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="blog-entry">
+					
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+						<span><?php the_time('d/m/Y |'); ?></span>
+						<span><?php the_author(); ?></span>
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<?php the_post_thumbnail('full'); ?>
+							</div>
+							<div class="col-md-8 col-sm-12">
+								<?php the_content();?>
+							</div>
+						</div>
+					</div>
+				<?php endwhile; ?>
+			</div>
+		</div>
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

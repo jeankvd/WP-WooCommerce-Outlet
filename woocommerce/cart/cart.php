@@ -20,10 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 wc_print_notices();?>
-	<header class=" woocommerce-products-header" style="background-image: url(<?php echo get_template_directory_uri() . '/images/shop-header.jpg' ?>); background-position: center; min-height:400px;" >
-<!-- Change This, find breadcrumb -->
-	<h1 id="wc-title">Cart</h1>
-	</header>
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
 

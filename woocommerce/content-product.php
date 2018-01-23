@@ -27,9 +27,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 <div <?php post_class('card item'); ?>>
 	<?php
 	echo ("<div class='item-buttons'>
-		<button>13</button>
-		<button>set</button>
-		<button>shr</button>
+		<button><i class='fa fa-heart-o' aria-hidden='true'></i></button>
+		<button><i class='fa fa-sliders' aria-hidden='true'></i></button>
+		<button><i class='fa fa-share-square-o' aria-hidden='true'></i></button>
 	</div>");
 	/**
 	 * woocommerce_before_shop_loop_item hook.

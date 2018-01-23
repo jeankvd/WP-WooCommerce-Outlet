@@ -17,22 +17,29 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+	
+		
+
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post();?>
+	<header class=" woocommerce-products-header" style="background-image: url(<?php echo get_template_directory_uri() . '/images/shop-header.jpg' ?>); background-position: center; min-height:400px;" >
+		<h1 id="wc-title"><?php single_post_title(); ?></h1>
+	</header>
 
-				get_template_part( 'template-parts/content', 'page' );
+	<div class="container" id="blog-content">
+		<div class="col-12">
+			<?php the_content(); ?>
+		</div>
+	</div>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				
 
-			endwhile; // End of the loop.
-			?>
+
+
+			<?php  endwhile; // End of the loop.?>
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
-get_sidebar();
 get_footer();
